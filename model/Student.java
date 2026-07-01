@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package model;
+
+//import model.person;
+//import model.KRS;
+import model.KRS;
+import java.util.ArrayList;
+/**
+ *
+ * @author Henryy
+ */
+public class Student extends person{
+    private String nim;
+    private String studyProgram;
+    private ArrayList<KRS> krsList;
+
+    public Student(String idCard, String name, String nim, String studyProgram) {
+        super(idCard, name);
+        this.nim = nim;
+        this.studyProgram = studyProgram;
+        krsList = new ArrayList<>();
+    }
+    @Override
+    public String toString(){
+        return this.name;
+    }
+    public String getNim(){
+        return nim;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getstudyProgram(){
+        return studyProgram;
+    }
+    public void addKRS(KRS krs){
+        krsList.add(krs);
+    }
+
+    public String getCardID() {
+       return idCard;
+    }
+
+    public String getStudyProgram() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+}
